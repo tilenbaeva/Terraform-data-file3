@@ -1,6 +1,15 @@
 
 # Terraform-data-file
 
+-  A "configuration" directory is our main config.place where is out "data.tfvars" file, with given state variables.  So, it is like a template for other instances with service.
+
+Description if files:
+- backend.tf --> specifies backend (service, e.g."s3")
+- instance.tf --> creates ec2 inctance with tags
+- provider.tf --> specifis provider which in our case is "AWS"
+- sec_group.tf --> creates security group 
+- variable.tf --> file which directly works with "data.tfvars" file 
+
 cd Terraform-data-file/				#Jump to your main directory
 cd dev/ (choose dir, e.g./dev, /uat) 		# You choose which dev
 edit ../configurationds/DEPT/data.tfvars	# Add/fill out variables
